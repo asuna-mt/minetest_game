@@ -2,151 +2,357 @@
 -- Sounds
 --
 
-function default.node_sound_defaults(table)
-	table = table or {}
-	table.footstep = table.footstep or
-			{name = "", gain = 1.0}
-	table.dug = table.dug or
-			{name = "default_dug_node", gain = 0.25}
-	table.place = table.place or
-			{name = "default_place_node_hard", gain = 1.0}
-	return table
-end
+if minetest.get_modpath("everness") then
+	function default.node_sound_defaults(table)
+		table = table or {}
+		table.footstep = table.footstep or { name = '', gain = 1.0 }
+		table.dug = table.dug or { name = 'everness_stone_hit', gain = 1.0 }
+		table.place = table.place or { name = 'everness_stone_dug', gain = 0.6 }
+		return table
+	end
 
-function default.node_sound_stone_defaults(table)
-	table = table or {}
-	table.footstep = table.footstep or
-			{name = "default_hard_footstep", gain = 0.2}
-	table.dug = table.dug or
-			{name = "default_hard_footstep", gain = 1.0}
-	default.node_sound_defaults(table)
-	return table
-end
+	function default.node_sound_frosted_snow_defaults(table)
+		table = table or {}
+		table.footstep = table.footstep or { name = 'everness_frosted_snow_footstep', gain = 0.2 }
+		table.dig = table.dig or { name = 'everness_frosted_snow_hit', gain = 0.2 }
+		table.dug = table.dug or { name = 'everness_frosted_snow_footstep', gain = 0.3 }
+		table.place = table.place or { name = 'everness_frosted_snow_place', gain = 0.25 }
+		return table
+	end
 
-function default.node_sound_dirt_defaults(table)
-	table = table or {}
-	table.footstep = table.footstep or
-			{name = "default_dirt_footstep", gain = 0.25}
-	table.dig = table.dig or
-			{name = "default_dig_crumbly", gain = 0.4}
-	table.dug = table.dug or
-			{name = "default_dirt_footstep", gain = 1.0}
-	table.place = table.place or
-			{name = "default_place_node", gain = 1.0}
-	default.node_sound_defaults(table)
-	return table
-end
+	function default.node_sound_crystal_defaults(table)
+		table = table or {}
+		table.footstep = table.footstep or { name = 'everness_crystal_chime', gain = 0.2 }
+		table.dig = table.dig or { name = 'everness_crystal_chime', gain = 0.3 }
+		table.dug = table.dug or { name = 'everness_stone_footstep', gain = 0.3 }
+		table.place = table.place or { name = 'everness_crystal_chime', gain = 1.0 }
+		return table
+	end
 
-function default.node_sound_sand_defaults(table)
-	table = table or {}
-	table.footstep = table.footstep or
-			{name = "default_sand_footstep", gain = 0.05}
-	table.dug = table.dug or
-			{name = "default_sand_footstep", gain = 0.15}
-	table.place = table.place or
-			{name = "default_place_node", gain = 1.0}
-	default.node_sound_defaults(table)
-	return table
-end
+	function default.node_sound_bamboo_defaults(table)
+		table = table or {}
+		table.footstep = table.footstep or { name = 'everness_bamboo_hit', gain = 0.2 }
+		table.dig = table.dig or { name = 'everness_bamboo_hit', gain = 0.3 }
+		table.dug = table.dug or { name = 'everness_bamboo_dug', gain = 0.1 }
+		table.place = table.place or { name = 'everness_bamboo_hit', gain = 1.0 }
+		return table
+	end
 
-function default.node_sound_gravel_defaults(table)
-	table = table or {}
-	table.footstep = table.footstep or
-			{name = "default_gravel_footstep", gain = 0.25}
-	table.dig = table.dig or
-			{name = "default_gravel_dig", gain = 0.35}
-	table.dug = table.dug or
-			{name = "default_gravel_dug", gain = 1.0}
-	table.place = table.place or
-			{name = "default_place_node", gain = 1.0}
-	default.node_sound_defaults(table)
-	return table
-end
+	function default.node_sound_mud_defaults(table)
+		table = table or {}
+		table.footstep = table.footstep or { name = 'everness_mud_footstep', gain = 0.2 }
+		table.dig = table.dig or { name = 'everness_mud_footstep', gain = 0.3 }
+		table.dug = table.dug or { name = 'everness_mud_footstep', gain = 0.1 }
+		table.place = table.place or { name = 'everness_mud_footstep', gain = 1.0 }
+		return table
+	end
 
-function default.node_sound_wood_defaults(table)
-	table = table or {}
-	table.footstep = table.footstep or
-			{name = "default_wood_footstep", gain = 0.15}
-	table.dig = table.dig or
-			{name = "default_dig_choppy", gain = 0.4}
-	table.dug = table.dug or
-			{name = "default_wood_footstep", gain = 1.0}
-	default.node_sound_defaults(table)
-	return table
-end
+	function default.node_sound_grass_defaults(table)
+		table = table or {}
+		table.footstep = table.footstep or { name = 'everness_grass_footstep', gain = 0.6 }
+		table.dig = table.dig or { name = 'everness_grass_hit', gain = 1.2 }
+		table.dug = table.dug or { name = 'everness_dirt_hit', gain = 1.0 }
+		table.place = table.place or { name = 'everness_dirt_hit', gain = 1.0 }
+		return table
+	end
 
-function default.node_sound_leaves_defaults(table)
-	table = table or {}
-	table.footstep = table.footstep or
-			{name = "default_grass_footstep", gain = 0.45}
-	table.dug = table.dug or
-			{name = "default_grass_footstep", gain = 0.7}
-	table.place = table.place or
-			{name = "default_place_node", gain = 1.0}
-	default.node_sound_defaults(table)
-	return table
-end
+	function default.node_sound_dirt_defaults(table)
+		table = table or {}
+		table.footstep = table.footstep or { name = 'everness_dirt_footstep', gain = 0.15 }
+		table.dig = table.dig or { name = 'everness_dirt_hit', gain = 0.4 }
+		table.dug = table.dug or { name = 'everness_dirt_hit', gain = 1.0 }
+		table.place = table.place or { name = 'everness_dirt_hit', gain = 1.0 }
+		return table
+	end
 
-function default.node_sound_glass_defaults(table)
-	table = table or {}
-	table.footstep = table.footstep or
-			{name = "default_glass_footstep", gain = 0.3}
-	table.dig = table.dig or
-			{name = "default_glass_footstep", gain = 0.5}
-	table.dug = table.dug or
-			{name = "default_break_glass", gain = 1.0}
-	default.node_sound_defaults(table)
-	return table
-end
+	function default.node_sound_ice_defaults(table)
+		table = table or {}
+		table.footstep = table.footstep or { name = 'everness_ice_footstep', gain = 0.2 }
+		table.dig = table.dig or { name = 'everness_ice_hit', gain = 0.4 }
+		table.dug = table.dug or { name = 'everness_ice_hit', gain = 1.0 }
+		table.place = table.place or { name = 'everness_ice_hit', gain = 1.0 }
+		return table
+	end
 
-function default.node_sound_ice_defaults(table)
-	table = table or {}
-	table.footstep = table.footstep or
-			{name = "default_ice_footstep", gain = 0.15}
-	table.dig = table.dig or
-			{name = "default_ice_dig", gain = 0.5}
-	table.dug = table.dug or
-			{name = "default_ice_dug", gain = 0.5}
-	default.node_sound_defaults(table)
-	return table
-end
+	function default.node_sound_stone_defaults(table)
+		table = table or {}
+		table.footstep = table.footstep or { name = 'everness_stone_footstep', gain = 0.6 }
+		table.dig = table.dig or { name = 'everness_stone_hit', gain = 1.0 }
+		table.dug = table.dug or { name = 'everness_stone_dug', gain = 0.6 }
+		table.place = table.place or { name = 'everness_stone_place', gain = 1.0 }
+		return table
+	end
 
-function default.node_sound_metal_defaults(table)
-	table = table or {}
-	table.footstep = table.footstep or
-			{name = "default_metal_footstep", gain = 0.2}
-	table.dig = table.dig or
-			{name = "default_dig_metal", gain = 0.5}
-	table.dug = table.dug or
-			{name = "default_dug_metal", gain = 0.5}
-	table.place = table.place or
-			{name = "default_place_node_metal", gain = 0.5}
-	default.node_sound_defaults(table)
-	return table
-end
+	function default.node_sound_leaves_defaults(table)
+		table = table or {}
+		table.footstep = table.footstep or { name = 'everness_leaves_footstep', gain = 0.1 }
+		table.dig = table.dig or { name = 'everness_leaves_hit', gain = 0.25 }
+		table.dug = table.dug or { name = 'everness_leaves_dug', gain = 0.5 }
+		table.place = table.place or { name = 'everness_leaves_place', gain = 0.4 }
+		return table
+	end
 
-function default.node_sound_water_defaults(table)
-	table = table or {}
-	table.footstep = table.footstep or
-			{name = "default_water_footstep", gain = 0.2}
-	default.node_sound_defaults(table)
-	return table
-end
+	function default.node_sound_wood_defaults(table)
+		table = table or {}
+		table.footstep = table.footstep or { name = 'everness_wood_footstep', gain = 0.15 }
+		table.dig = table.dig or { name = 'everness_wood_hit', gain = 0.8 }
+		table.dug = table.dug or { name = 'everness_wood_place', gain = 0.1 }
+		table.place = table.place or { name = 'everness_wood_place', gain = 0.15 }
+		return table
+	end
 
-function default.node_sound_snow_defaults(table)
-	table = table or {}
-	table.footstep = table.footstep or
-			{name = "default_snow_footstep", gain = 0.2}
-	table.dig = table.dig or
-			{name = "default_snow_footstep", gain = 0.3}
-	table.dug = table.dug or
-			{name = "default_snow_footstep", gain = 0.3}
-	table.place = table.place or
-			{name = "default_place_node", gain = 1.0}
-	default.node_sound_defaults(table)
-	return table
-end
+	function default.node_sound_sand_defaults(table)
+		table = table or {}
+		table.footstep = table.footstep or { name = 'everness_sand_footstep', gain = 0.1 }
+		table.dig = table.dig or { name = 'everness_sand_hit', gain = 0.5 }
+		table.dug = table.dug or { name = 'everness_sand_dug', gain = 0.1 }
+		table.place = table.place or { name = 'everness_sand_place', gain = 0.15 }
+		return table
+	end
 
+	function default.node_sound_metal_defaults(table)
+		table = table or {}
+		table.footstep = table.footstep or { name = 'everness_metal_footstep', gain = 0.1 }
+		table.dig = table.dig or { name = 'everness_metal_hit', gain = 0.5 }
+		table.dug = table.dug or { name = 'everness_metal_dug', gain = 0.1 }
+		table.place = table.place or { name = 'everness_metal_place', gain = 0.15 }
+		return table
+	end
+
+	function default.node_sound_thin_glass_defaults(table)
+		table = table or {}
+		table.footstep = table.footstep or { name = 'everness_thin_glass_footstep', gain = 0.3 }
+		table.dig = table.dig or { name = 'everness_thin_glass_footstep', gain = 0.5 }
+		table.dug = table.dug or { name = 'everness_break_thin_glass', gain = 1.0 }
+		table.place = table.place or { name = 'everness_glass_place', gain = 0.2 }
+		return table
+	end
+
+	default.node_sound_glass_defaults = default.node_sound_thin_glass_defaults
+
+	--[[function default.node_sound_glass_defaults(table)
+		table = table or {}
+		table.footstep = table.footstep or { name = 'everness_glass_footstep', gain = 0.02 }
+		table.dig = table.dig or { name = 'everness_glass_footstep', gain = 0.05 }
+		table.dug = table.dug or { name = 'everness_glass_dug', gain = 0.4 }
+		table.place = table.place or { name = 'everness_glass_place', gain = 0.2 }
+		return table
+	end]]
+
+	function default.node_sound_snow_defaults(table)
+		table = table or {}
+		table.footstep = table.footstep or { name = 'everness_snow_footstep', gain = 0.1 }
+		table.dig = table.dig or { name = 'everness_snow_hit', gain = 0.2 }
+		table.dug = table.dug or { name = 'everness_snow_footstep', gain = 0.2 }
+		table.place = table.place or { name = 'everness_snow_place', gain = 0.3 }
+		return table
+	end
+
+	function default.node_sound_gravel_defaults(table)
+		table = table or {}
+		table.footstep = table.footstep or { name = 'everness_gravel_footstep', gain = 0.2 }
+		table.dig = table.dig or { name = 'everness_gravel_hit', gain = 1.0 }
+		table.dug = table.dug or { name = 'everness_gravel_dug', gain = 0.6 }
+		table.place = table.place or { name = 'everness_gravel_place', gain = 1.0 }
+		return table
+	end
+
+	function default.node_sound_ceramic_defaults(table)
+		table = table or {}
+		table.footstep = table.footstep or { name = 'everness_ceramic_footstep', gain = 0.2 }
+		table.dig = table.dig or { name = 'everness_ceramic_hit', gain = 1.0 }
+		table.dug = table.dug or { name = 'everness_ceramic_dug', gain = 1.0 }
+		table.place = table.place or { name = 'everness_ceramic_place', gain = 1.0 }
+		return table
+	end
+
+	function default.node_sound_water_defaults(table)
+		table = table or {}
+		table.footstep = table.footstep or { name = 'everness_water_footstep', gain = 0.05 }
+		default.node_sound_defaults(table)
+		return table
+	end
+
+	-- Override hard-coded default sounds with Everness sounds
+
+	minetest.register_on_mods_loaded(function()
+		local sound_map = {
+			default_dug_node = { name = 'everness_stone_hit', gain = 1.0 },
+			default_place_node_hard = { name = 'everness_stone_dug', gain = 0.6 },
+			default_hard_footstep = { name = 'everness_stone_footstep', gain = 0.6 },
+			default_dirt_footstep = { name = 'everness_dirt_footstep', gain = 0.15 },
+			default_dig_crumbly = { name = 'everness_dirt_hit', gain = 1.0 },
+			default_grass_footstep = { name = 'everness_grass_footstep', gain = 0.6 },
+			default_sand_footstep = { name = 'everness_sand_footstep', gain = 0.1 },
+			default_glass_footstep = { name = 'everness_glass_footstep', gain = 0.02 },
+			default_break_glass = { name = 'everness_glass_place', gain = 0.2 },
+			default_ice_footstep = { name = 'everness_ice_footstep', gain = 0.2 },
+			default_ice_dig = { name = 'everness_ice_hit', gain = 0.4 },
+			default_ice_dug = { name = 'everness_ice_hit', gain = 1.0 },
+			default_metal_footstep = { name = 'everness_metal_footstep', gain = 0.1 },
+			default_metal_dig = { name = 'everness_metal_hit', gain = 0.5 },
+			default_metal_dug = { name = 'everness_metal_dug', gain = 0.1 },
+			default_metal_place = { name = 'everness_metal_place', gain = 0.15 },
+			default_snow_footstep = { name = 'everness_snow_footstep', gain = 0.1 },
+			default_water_footstep = { name = 'everness_water_footstep', gain = 0.05 },
+		}
+
+		for node,def in pairs(minetest.registered_nodes) do
+			local sounds = def.sounds or {}
+			for name,sound in pairs(sounds) do
+				local everness_sound = sound_map[sound.name]
+				if everness_sound then
+					sounds[name] = { name = everness_sound.name, gain = everness_sound.gain }
+				end
+			end
+		end
+	end)
+else
+	function default.node_sound_defaults(table)
+		table = table or {}
+		table.footstep = table.footstep or
+				{name = "", gain = 1.0}
+		table.dug = table.dug or
+				{name = "default_dug_node", gain = 0.25}
+		table.place = table.place or
+				{name = "default_place_node_hard", gain = 1.0}
+		return table
+	end
+
+	function default.node_sound_stone_defaults(table)
+		table = table or {}
+		table.footstep = table.footstep or
+				{name = "default_hard_footstep", gain = 0.2}
+		table.dug = table.dug or
+				{name = "default_hard_footstep", gain = 1.0}
+		default.node_sound_defaults(table)
+		return table
+	end
+
+	function default.node_sound_dirt_defaults(table)
+		table = table or {}
+		table.footstep = table.footstep or
+				{name = "default_dirt_footstep", gain = 0.25}
+		table.dig = table.dig or
+				{name = "default_dig_crumbly", gain = 0.4}
+		table.dug = table.dug or
+				{name = "default_dirt_footstep", gain = 1.0}
+		table.place = table.place or
+				{name = "default_place_node", gain = 1.0}
+		default.node_sound_defaults(table)
+		return table
+	end
+
+	function default.node_sound_sand_defaults(table)
+		table = table or {}
+		table.footstep = table.footstep or
+				{name = "default_sand_footstep", gain = 0.05}
+		table.dug = table.dug or
+				{name = "default_sand_footstep", gain = 0.15}
+		table.place = table.place or
+				{name = "default_place_node", gain = 1.0}
+		default.node_sound_defaults(table)
+		return table
+	end
+
+	function default.node_sound_gravel_defaults(table)
+		table = table or {}
+		table.footstep = table.footstep or
+				{name = "default_gravel_footstep", gain = 0.25}
+		table.dig = table.dig or
+				{name = "default_gravel_dig", gain = 0.35}
+		table.dug = table.dug or
+				{name = "default_gravel_dug", gain = 1.0}
+		table.place = table.place or
+				{name = "default_place_node", gain = 1.0}
+		default.node_sound_defaults(table)
+		return table
+	end
+
+	function default.node_sound_wood_defaults(table)
+		table = table or {}
+		table.footstep = table.footstep or
+				{name = "default_wood_footstep", gain = 0.15}
+		table.dig = table.dig or
+				{name = "default_dig_choppy", gain = 0.4}
+		table.dug = table.dug or
+				{name = "default_wood_footstep", gain = 1.0}
+		default.node_sound_defaults(table)
+		return table
+	end
+
+	function default.node_sound_leaves_defaults(table)
+		table = table or {}
+		table.footstep = table.footstep or
+				{name = "default_grass_footstep", gain = 0.45}
+		table.dug = table.dug or
+				{name = "default_grass_footstep", gain = 0.7}
+		table.place = table.place or
+				{name = "default_place_node", gain = 1.0}
+		default.node_sound_defaults(table)
+		return table
+	end
+
+	function default.node_sound_glass_defaults(table)
+		table = table or {}
+		table.footstep = table.footstep or
+				{name = "default_glass_footstep", gain = 0.3}
+		table.dig = table.dig or
+				{name = "default_glass_footstep", gain = 0.5}
+		table.dug = table.dug or
+				{name = "default_break_glass", gain = 1.0}
+		default.node_sound_defaults(table)
+		return table
+	end
+
+	function default.node_sound_ice_defaults(table)
+		table = table or {}
+		table.footstep = table.footstep or
+				{name = "default_ice_footstep", gain = 0.15}
+		table.dig = table.dig or
+				{name = "default_ice_dig", gain = 0.5}
+		table.dug = table.dug or
+				{name = "default_ice_dug", gain = 0.5}
+		default.node_sound_defaults(table)
+		return table
+	end
+
+	function default.node_sound_metal_defaults(table)
+		table = table or {}
+		table.footstep = table.footstep or
+				{name = "default_metal_footstep", gain = 0.2}
+		table.dig = table.dig or
+				{name = "default_dig_metal", gain = 0.5}
+		table.dug = table.dug or
+				{name = "default_dug_metal", gain = 0.5}
+		table.place = table.place or
+				{name = "default_place_node_metal", gain = 0.5}
+		default.node_sound_defaults(table)
+		return table
+	end
+
+	function default.node_sound_water_defaults(table)
+		table = table or {}
+		table.footstep = table.footstep or
+				{name = "default_water_footstep", gain = 0.2}
+		default.node_sound_defaults(table)
+		return table
+	end
+
+	function default.node_sound_snow_defaults(table)
+		table = table or {}
+		table.footstep = table.footstep or
+				{name = "default_snow_footstep", gain = 0.2}
+		table.dig = table.dig or
+				{name = "default_snow_footstep", gain = 0.3}
+		table.dug = table.dug or
+				{name = "default_snow_footstep", gain = 0.3}
+		table.place = table.place or
+				{name = "default_place_node", gain = 1.0}
+		default.node_sound_defaults(table)
+		return table
+	end
+end
 
 --
 -- Lavacooling
