@@ -2080,7 +2080,7 @@ minetest.register_node("default:coral_green", {
 	special_tiles = {{name = "default_coral_green.png", tileable_vertical = true}},
 	inventory_image = "default_coral_green.png",
 	wield_image = "default_coral_green.png",
-	groups = {snappy = 3},
+	groups = {snappy = 3, coral = 1},
 	selection_box = {
 		type = "fixed",
 		fixed = {
@@ -2111,7 +2111,7 @@ minetest.register_node("default:coral_pink", {
 	special_tiles = {{name = "default_coral_pink.png", tileable_vertical = true}},
 	inventory_image = "default_coral_pink.png",
 	wield_image = "default_coral_pink.png",
-	groups = {snappy = 3},
+	groups = {snappy = 3, coral = 1},
 	selection_box = {
 		type = "fixed",
 		fixed = {
@@ -2142,7 +2142,7 @@ minetest.register_node("default:coral_cyan", {
 	special_tiles = {{name = "default_coral_cyan.png", tileable_vertical = true}},
 	inventory_image = "default_coral_cyan.png",
 	wield_image = "default_coral_cyan.png",
-	groups = {snappy = 3},
+	groups = {snappy = 3, coral = 1},
 	selection_box = {
 		type = "fixed",
 		fixed = {
@@ -2167,7 +2167,7 @@ minetest.register_node("default:coral_cyan", {
 minetest.register_node("default:coral_brown", {
 	description = S("Brown Coral"),
 	tiles = {"default_coral_brown.png"},
-	groups = {cracky = 3},
+	groups = {cracky = 3, coral = 1},
 	drop = "default:coral_skeleton",
 	sounds = default.node_sound_stone_defaults(),
 })
@@ -2175,7 +2175,7 @@ minetest.register_node("default:coral_brown", {
 minetest.register_node("default:coral_orange", {
 	description = S("Orange Coral"),
 	tiles = {"default_coral_orange.png"},
-	groups = {cracky = 3},
+	groups = {cracky = 3, coral = 1},
 	drop = "default:coral_skeleton",
 	sounds = default.node_sound_stone_defaults(),
 })
@@ -2183,7 +2183,7 @@ minetest.register_node("default:coral_orange", {
 minetest.register_node("default:coral_skeleton", {
 	description = S("Coral Skeleton"),
 	tiles = {"default_coral_skeleton.png"},
-	groups = {cracky = 3},
+	groups = {cracky = 3, coral = 1},
 	sounds = default.node_sound_stone_defaults(),
 })
 
