@@ -226,12 +226,12 @@ minetest.register_node("flowers:mushroom_brown", {
 -- Mushroom spread and death
 
 function flowers.mushroom_spread(pos, node)
-	if minetest.get_node_light(pos, 0.5) > 3 then
+	--[[if minetest.get_node_light(pos, 0.5) > 3 then
 		if minetest.get_node_light(pos, nil) == 15 then
 			minetest.remove_node(pos)
 		end
 		return
-	end
+	end]]
 	local positions = minetest.find_nodes_in_area_under_air(
 		{x = pos.x - 1, y = pos.y - 2, z = pos.z - 1},
 		{x = pos.x + 1, y = pos.y + 1, z = pos.z + 1},
