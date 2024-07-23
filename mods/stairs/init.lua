@@ -65,6 +65,10 @@ end
 
 -- Set backface culling and world-aligned textures
 local function set_textures(images, worldaligntex)
+	if worldaligntex == nil then
+		worldaligntex = true
+	end
+
 	local stair_images = {}
 	for i, image in ipairs(images) do
 		stair_images[i] = type(image) == "string" and {name = image} or table.copy(image)
