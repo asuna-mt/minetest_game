@@ -468,7 +468,7 @@ my_register_stair_and_slab(
 	"Wooden Stair",
 	"Wooden Slab",
 	default.node_sound_wood_defaults(),
-	false
+	true
 )
 
 my_register_stair_and_slab(
@@ -479,7 +479,7 @@ my_register_stair_and_slab(
 	"Jungle Wood Stair",
 	"Jungle Wood Slab",
 	default.node_sound_wood_defaults(),
-	false
+	true
 )
 
 my_register_stair_and_slab(
@@ -490,7 +490,7 @@ my_register_stair_and_slab(
 	"Pine Wood Stair",
 	"Pine Wood Slab",
 	default.node_sound_wood_defaults(),
-	false
+	true
 )
 
 my_register_stair_and_slab(
@@ -501,7 +501,7 @@ my_register_stair_and_slab(
 	"Acacia Wood Stair",
 	"Acacia Wood Slab",
 	default.node_sound_wood_defaults(),
-	false
+	true
 )
 
 my_register_stair_and_slab(
@@ -512,7 +512,7 @@ my_register_stair_and_slab(
 	"Aspen Wood Stair",
 	"Aspen Wood Slab",
 	default.node_sound_wood_defaults(),
-	false
+	true
 )
 
 my_register_stair_and_slab(
@@ -556,7 +556,7 @@ my_register_stair_and_slab(
 	"Stone Brick Stair",
 	"Stone Brick Slab",
 	default.node_sound_stone_defaults(),
-	false
+	true
 )
 
 my_register_stair_and_slab(
@@ -600,7 +600,7 @@ my_register_stair_and_slab(
 	"Desert Stone Brick Stair",
 	"Desert Stone Brick Slab",
 	default.node_sound_stone_defaults(),
-	false
+	true
 )
 
 my_register_stair_and_slab(
@@ -633,7 +633,7 @@ my_register_stair_and_slab(
 	"Sandstone Brick Stair",
 	"Sandstone Brick Slab",
 	default.node_sound_stone_defaults(),
-	false
+	true
 )
 
 my_register_stair_and_slab(
@@ -666,7 +666,7 @@ my_register_stair_and_slab(
 	"Desert Sandstone Brick Stair",
 	"Desert Sandstone Brick Slab",
 	default.node_sound_stone_defaults(),
-	false
+	true
 )
 
 my_register_stair_and_slab(
@@ -699,7 +699,7 @@ my_register_stair_and_slab(
 	"Silver Sandstone Brick Stair",
 	"Silver Sandstone Brick Slab",
 	default.node_sound_stone_defaults(),
-	false
+	true
 )
 
 my_register_stair_and_slab(
@@ -732,7 +732,7 @@ my_register_stair_and_slab(
 	"Obsidian Brick Stair",
 	"Obsidian Brick Slab",
 	default.node_sound_stone_defaults(),
-	false
+	true
 )
 
 my_register_stair_and_slab(
@@ -754,7 +754,7 @@ my_register_stair_and_slab(
 	"Brick Stair",
 	"Brick Slab",
 	default.node_sound_stone_defaults(),
-	false
+	true
 )
 
 my_register_stair_and_slab(
@@ -845,7 +845,7 @@ stairs.register_stair(
 	"default_glass.png", "stairs_glass_split.png"},
 	S("Glass Stair"),
 	default.node_sound_glass_defaults(),
-	false
+	true
 )
 
 stairs.register_slab(
@@ -855,7 +855,7 @@ stairs.register_slab(
 	{"default_glass.png", "default_glass.png", "stairs_glass_split.png"},
 	S("Glass Slab"),
 	default.node_sound_glass_defaults(),
-	false
+	true
 )
 
 stairs.register_stair_inner(
@@ -867,7 +867,7 @@ stairs.register_stair_inner(
 	"default_glass.png", "stairs_glass_stairside.png"},
 	"",
 	default.node_sound_glass_defaults(),
-	false,
+	true,
 	S("Inner Glass Stair")
 )
 
@@ -880,7 +880,7 @@ stairs.register_stair_outer(
 	"stairs_glass_stairside.png^[transformR90","stairs_glass_outer_stairside.png"},
 	"",
 	default.node_sound_glass_defaults(),
-	false,
+	true,
 	S("Outer Glass Stair")
 )
 
@@ -893,7 +893,7 @@ stairs.register_stair(
 	"default_obsidian_glass.png", "stairs_obsidian_glass_split.png"},
 	S("Obsidian Glass Stair"),
 	default.node_sound_glass_defaults(),
-	false
+	true
 )
 
 stairs.register_slab(
@@ -903,7 +903,7 @@ stairs.register_slab(
 	{"default_obsidian_glass.png", "default_obsidian_glass.png", "stairs_obsidian_glass_split.png"},
 	S("Obsidian Glass Slab"),
 	default.node_sound_glass_defaults(),
-	false
+	true
 )
 
 stairs.register_stair_inner(
@@ -915,7 +915,7 @@ stairs.register_stair_inner(
 	"default_obsidian_glass.png", "stairs_obsidian_glass_stairside.png"},
 	"",
 	default.node_sound_glass_defaults(),
-	false,
+	true,
 	S("Inner Obsidian Glass Stair")
 )
 
@@ -928,7 +928,7 @@ stairs.register_stair_outer(
 	"stairs_obsidian_glass_stairside.png^[transformR90","stairs_obsidian_glass_outer_stairside.png"},
 	"",
 	default.node_sound_glass_defaults(),
-	false,
+	true,
 	S("Outer Obsidian Glass Stair")
 )
 
