@@ -877,7 +877,10 @@ minetest.register_abm({
 		if name ~= "ignore" and nodedef and not ((nodedef.sunlight_propagates or
 				nodedef.paramtype == "light") and
 				nodedef.liquidtype == "none") then
-			if node.name == "default:dry_dirt_with_dry_grass" then
+			local ndef = minetest.registered_nodes[node.name]
+			if ndef and type(ndef.drop) == "string" and minetest.registered_nodes[ndef.drop] then
+				minetest.set_node(pos, {name = ndef.drop})
+			elseif node.name == "default:dry_dirt_with_dry_grass" then
 				minetest.set_node(pos, {name = "default:dry_dirt"})
 			else
 				minetest.set_node(pos, {name = "default:dirt"})
