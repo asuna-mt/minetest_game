@@ -612,7 +612,7 @@ function default.register_ores()
 		clust_num_ores = 9,
 		clust_size     = 3,
 		y_max          = 31000,
-		y_min          = 1025,
+		y_min          = asuna.content.stratosphere.floatlands and 250 or 1025,
 	})
 
 	minetest.register_ore({
@@ -647,7 +647,7 @@ function default.register_ores()
 		clust_num_ores = 5,
 		clust_size     = 3,
 		y_max          = 31000,
-		y_min          = 1025,
+		y_min          = asuna.content.stratosphere.floatlands and 350 or 1025,
 	})
 
 	minetest.register_ore({
@@ -682,7 +682,7 @@ function default.register_ores()
 		clust_num_ores = 5,
 		clust_size     = 3,
 		y_max          = 31000,
-		y_min          = 1025,
+		y_min          = asuna.content.stratosphere.floatlands and 350 or 1025,
 	})
 
 	minetest.register_ore({
@@ -717,7 +717,7 @@ function default.register_ores()
 		clust_num_ores = 12,
 		clust_size     = 3,
 		y_max          = 31000,
-		y_min          = 1025,
+		y_min          = asuna.content.stratosphere.floatlands and 500 or 1025,
 	})
 
 	minetest.register_ore({
@@ -752,7 +752,7 @@ function default.register_ores()
 		clust_num_ores = 5,
 		clust_size     = 3,
 		y_max          = 31000,
-		y_min          = 1025,
+		y_min          = asuna.content.stratosphere.floatlands and 750 or 1025,
 	})
 
 	minetest.register_ore({
@@ -787,7 +787,7 @@ function default.register_ores()
 		clust_num_ores = 5,
 		clust_size     = 3,
 		y_max          = 31000,
-		y_min          = 1025,
+		y_min          = asuna.content.stratosphere.floatlands and 1000 or 1025,
 	})
 
 	minetest.register_ore({
@@ -822,7 +822,7 @@ function default.register_ores()
 		clust_num_ores = 4,
 		clust_size     = 3,
 		y_max          = 31000,
-		y_min          = 1025,
+		y_min          = asuna.content.stratosphere.floatlands and 1500 or 1025,
 	})
 
 	minetest.register_ore({
@@ -857,7 +857,7 @@ function default.register_ores()
 		clust_num_ores = 3,
 		clust_size     = 2,
 		y_max          = 31000,
-		y_min          = 1025,
+		y_min          = asuna.content.stratosphere.floatlands and 2000 or 1025,
 	})
 
 	minetest.register_ore({
